@@ -7,7 +7,15 @@ console.clear();
 
 // * Your code Start *
 
+var phoneNumber = prompt('Please enter you phone number', 0);
 
+if(phoneNumber <== 9) {
+  console.error('Your phone number is lower')
+} else if(phoneNumber >== 11) {
+  console.error('Your phone number is lower')
+} else {
+  console.info('Your phone number is lower')
+}
 
 // * Your code End *
 
@@ -26,7 +34,9 @@ var objectB = {};
 
 // * Your code Start *
 
-
+for(var key in objectA){
+  objectB[key] = object[key]
+}
 
 // * Your code End *
 
@@ -55,6 +65,45 @@ var monthName = ''; // Переменная для значения
 
 // * Your code Start *
 
+// * Your code Start *
+switch (month) {
+	case 0:
+		monthName = 'Января';
+		break;
+	case 1:
+		monthName = 'Февраля';
+		break;
+	case 2:
+		monthName = 'Марта';
+		break;
+	case 3:
+		monthName = 'Апреля';
+		break;
+	case 4:
+		monthName = 'Мая';
+		break;
+	case 5:
+		monthName = 'Июня';
+		break;
+	case 6:
+		monthName = 'Июля';
+		break;
+	case 7:
+		monthName = 'Августа';
+		break;
+	case 8:
+		monthName = 'Сентября';
+		break;
+	case 9:
+		monthName = 'Октября';
+		break;
+	case 10:
+		monthName = 'Ноября';
+		break;
+	case 11:
+		monthName = 'Декабря';
+		break;
+}
 
 
 // * Your code End *
@@ -84,30 +133,17 @@ var users = [{
 
 // * Your code Start *
 
-
-
-// * Your code End *
-
-
-// ## 4
-// Создайте беспрерывный цикл который принимает от пользователя числа, и суммирует
-// Цикл прирывается только в том случае если пользователь ввел что либо кроме числа
-// После прерывания цикла выводится сумма введеных чисел
-
-var sumArray = prompt('Please enter number', 0);
-
-// * Your code Start *
-
-
-// * Your code End *
-
-// ## 5
-// Найдите сумму  1 + 2 + 3 + ... + N, где число N вводится пользователем из prompt
-
-var summetNumber = prompt('Please enter number', 0);
-
-// * Your code Start *
-
-
+outer: while(true) {
+  for(var i = 0; i < users.length; i += 1) {
+    if(users[i].name === prompt('Please enter your name:', '')) {
+      if(users[i].password == prompt('Please enter you password', '')) {
+        alert('You are login')
+        break outer;
+      } else {
+        alert('Try again please')
+      }
+    }
+  }
+}
 
 // * Your code End *
