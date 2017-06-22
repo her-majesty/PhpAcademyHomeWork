@@ -111,3 +111,26 @@ var summetNumber = prompt('Please enter number', 0);
 
 
 // * Your code End *
+
+
+// ## 6
+// Нарисовать шахматную доску используя вложенные циклы (Доска находится в файле html)
+// Размер шахматной доски стандартны 8х8
+// Функция drawFractions - вспомогательная, при ее вызове в к блоку board в html добаляется 1 квардрат доски
+// Ее можно не трогать
+// Например что бы нарисовать 1 квадрат нужно вызвать ее 1 раз: drawFraction();
+// Так же доски должны иметь черный\белый цвет. Реализовать это можно при помощи как css так и js
+
+var drawFraction = function(){
+  const board = document.querySelector('.board');
+  const fraction = document.createElement('div');
+  board.appendChild(fraction);
+}
+
+const size = 8;
+drawFraction()
+// * Your code Start *
+
+
+
+// * Your code End *
