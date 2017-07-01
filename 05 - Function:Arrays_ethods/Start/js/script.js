@@ -11,13 +11,13 @@ console.clear();
 
 // * Your code End *
 
-//console.log(argumentsSumm(10, 20, 50, 4, 17))   // 97
-//console.log(argumentsSumm(0, 1, 1, -1, 1))      // 3
-//console.log(argumentsSumm(4, 'lol', 0))         // Все аргументы должны быть числовыми
-//console.log(argumentsSumm(NaN, 4, 6, 4, 0))     // Все аргументы должны быть числовыми
+console.log(argumentsSumm(10, 20, 50, 4, 17))   // 97
+console.log(argumentsSumm(0, 1, 1, -1, 1))      // 3
+console.log(argumentsSumm(4, 'lol', 0))         // Все аргументы должны быть числовыми
+console.log(argumentsSumm(NaN, 4, 6, 4, 0))     // Все аргументы должны быть числовыми
 
 
-// ## 1 Замыкания
+// ## Замыкания
 //
 // Посмотрите на код внизу
 // Обьясните почему он работает именно так
@@ -46,8 +46,34 @@ console.log(func[1]()); // Выводит 5, а должно вывести 1
 console.log(func[3]()); // Выводит 5, а должно вывести 3
 
 
+// ## Callback функции
+//
+// Создайте функцию которая принимает 2 числовых значения
+// Третьим аргументом функции должна быть функция, которая будет манипулировать этими агументами
+
+// * Your code Start *
+
+
+
+// * Your code End *
+
+console.log(callback(20, 10, function(a, b){
+  return a + b
+})) // 30
+
+console.log(callback(20, 10, function(a, b){
+  return a - b
+})) // 10
+
+console.log(callback(20, 10, function(a, b){
+  return a * b
+})) // 200
+
+
+
 // ## Работа с массивами
 // Совсестите массив и строку с именами именно в таком порядке, как показанно в комментариях в строке.
+// Порядок действий:
 // * Разберите namesString на массив
 // * Добавьте новый массив в oldArray, после первого элемента массива
 // * Сделайте инверсию массива
@@ -66,6 +92,9 @@ console.log(fullRevertArrayString) // Должен вывести - 'Sylvanus Je
 
 
 // ## Методы перебора массива
+//
+// Задача создать 4 функции которые создают новый массив
+// Во всех кейсах за основу берется массив itDepartment
 
 var itDepartment = [
   { first: 'Philip', last: 'Bradley', born: 1979, possition: 'Back-end' },
@@ -78,6 +107,10 @@ var itDepartment = [
 ];
 
 // * Your code Start *
+
+
+
+// * Your code End *
 
 // map(); Создайте массив в котором будут имена и фамилии всех работников It департамента. (В формате Philip Bradley)
 console.dir(fullNames);
@@ -95,5 +128,3 @@ console.table(sorted);
 // Manager: 1
 
 console.log(counter);
-
-// * Your code End *
