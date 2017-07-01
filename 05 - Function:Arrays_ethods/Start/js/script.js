@@ -47,7 +47,11 @@ console.log(func[3]()); // Выводит 5, а должно вывести 3
 
 
 // ## Работа с массивами
-// Совсестите массив и строку с именами именно в таком порядке, как показанно в комментариях в строке%.
+// Совсестите массив и строку с именами именно в таком порядке, как показанно в комментариях в строке.
+// * Разберите namesString на массив
+// * Добавьте новый массив в oldArray, после первого элемента массива
+// * Сделайте инверсию массива
+// * Превтатите полученный массив в строк использую разделитель '|'
 
 var oldArray = ['Dave Burt', 'Sylvanus Jeremiah'];
 var namesString = 'Hartley Evander, Kole Grady';
@@ -58,4 +62,38 @@ var namesString = 'Hartley Evander, Kole Grady';
 
 // * Your code End *
 
-console.log(oldArray.reverse()) // Должен вывести - 'Dave Burt | Hartley Evander | Kole Grady | Sylvanus Jeremiah'
+console.log(fullRevertArrayString) // Должен вывести - 'Sylvanus Jeremiah | Kole Grady | Hartley Evander | Dave Burt'
+
+
+// ## Методы перебора массива
+
+var itDepartment = [
+  { first: 'Philip', last: 'Bradley', born: 1979, possition: 'Back-end' },
+  { first: 'Phil', last: 'Harmon', born: 1983, possition: 'Front-end' },
+  { first: 'Marty', last: 'Ormond', born: 1991, possition: 'Front-end' },
+  { first: 'Silvester', last: 'Rod', born: 1987, possition: 'QA' },
+  { first: 'Johannes', last: 'Planck', born: 1971, possition: 'Front-end' },
+  { first: 'Reynard', last: 'Christopher', born: 1973, possition: 'QA' },
+  { first: 'Max', last: 'Forrest', born: 1988, possition: 'Managet' },
+];
+
+// * Your code Start *
+
+// map(); Создайте массив в котором будут имена и фамилии всех работников It департамента. (В формате Philip Bradley)
+console.dir(fullNames);
+
+// filter(); Отфильтруйте всех разработчиков (Developer) И выведете их имена и должности
+console.table(filtered);
+
+// sort(); Отсортируйте массив по возрасту работников. По убыванию. ()Подсказака: используйте конструктор new Data())
+console.table(sorted);
+
+// reduce(); Узнайте сколько всего разработчико разных должностей. Например:
+// Front-end: 2,
+// Back-end: 1,
+// QA: 2
+// Manager: 1
+
+console.log(counter);
+
+// * Your code End *
