@@ -11,8 +11,8 @@ console.clear();
 
 // * Your code End *
 
-console.log(argumentsSumm(10, 20, 50, 4, 17))   // 97
-console.log(argumentsSumm(0, 1, 1, -1, 1))      // 3
+console.log(argumentsSumm(10, 20, 50, 4, 17))   // 101
+console.log(argumentsSumm(0, 1, 1, -1, 1))      // 2
 console.log(argumentsSumm(4, 'lol', 0))         // Все аргументы должны быть числовыми
 console.log(argumentsSumm(NaN, 4, 6, 4, 0))     // Все аргументы должны быть числовыми
 
@@ -103,7 +103,7 @@ var itDepartment = [
   { first: 'Silvester', last: 'Rod', born: 1987, possition: 'QA' },
   { first: 'Johannes', last: 'Planck', born: 1971, possition: 'Front-end' },
   { first: 'Reynard', last: 'Christopher', born: 1973, possition: 'QA' },
-  { first: 'Max', last: 'Forrest', born: 1988, possition: 'Managet' },
+  { first: 'Max', last: 'Forrest', born: 1988, possition: 'Manager' },
 ];
 
 // * Your code Start *
