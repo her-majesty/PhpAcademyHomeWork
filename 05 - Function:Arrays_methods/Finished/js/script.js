@@ -40,9 +40,11 @@ var funcArrays = function () {
   var arr = [];
 
   for (var i = 0; i < 5; i++) {
-    arr.push(function() {
-      return i
-    });
+    arr.push((function(i){
+      return function() {
+        return i
+      }
+    }(i)));
   }
 
   return arr;
@@ -121,13 +123,13 @@ var itDepartment = [
   { first: 'Silvester', last: 'Rod', born: 1987, possition: 'QA' },
   { first: 'Johannes', last: 'Planck', born: 1971, possition: 'Front-end' },
   { first: 'Reynard', last: 'Christopher', born: 1973, possition: 'QA' },
-  { first: 'Max', last: 'Forrest', born: 1988, possition: 'Managet' },
+  { first: 'Max', last: 'Forrest', born: 1988, possition: 'Manager' },
 ];
 
 // * Your code Start *
 
 var fullNames = itDepartment.map(function(item){
-  return item.firstt + ' ' + item.last
+  return item.first + ' ' + item.last
 });
 
 var filtered = itDepartment.filter(function(item){
@@ -139,8 +141,13 @@ var sorted = itDepartment.sort(function(itemA, itemB){
   return currentYear - itemA.born > currentYear - itemB.born
 });
 
-var counter = itDepartment.reduce(function(count, item){
-
+var counter = itDepartment.reduce(function(obj, item){
+  var possition = item.possition;
+  if(!obj[possition]){
+    obj[possition] = 0;
+  }
+  obj[possition] += 1;
+  return obj;
 }, {});
 
 // * Your code End *
