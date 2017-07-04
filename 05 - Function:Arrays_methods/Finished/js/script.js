@@ -7,7 +7,17 @@ console.clear();
 
 // * Your code Start *
 
-
+var argumentsSumm = function() {
+  var sum = 0;
+  for(var i = 0; i < arguments.length; i++){
+    if(!isNaN(parseFloat(arguments[i])) && isFinite(arguments[i])){
+      sum += arguments[i];
+    } else {
+      return 'Все аргументы должны быть числовыми'
+    }
+  }
+  return sum
+}
 
 // * Your code End *
 
@@ -53,7 +63,9 @@ console.log(func[3]()); // Выводит 5, а должно вывести 3
 
 // * Your code Start *
 
-
+var callback = function(a, b, callbackFunc){
+  return callbackFunc(a, b);
+}
 
 // * Your code End *
 
@@ -79,12 +91,18 @@ console.log(callback(20, 10, function(a, b){
 // * Сделайте инверсию массива
 // * Превтатите полученный массив в строк использую разделитель '|'
 
+console.clear();
 var oldArray = ['Dave Burt', 'Sylvanus Jeremiah'];
 var namesString = 'Hartley Evander, Kole Grady';
 
 // * Your code Start *
 
+var namesArray = namesString.split(', ');
+namesArray.forEach(function(item, key){
+	oldArray.splice(key + 1, 0, item);
+});
 
+var fullRevertArrayString = oldArray.reverse()
 
 // * Your code End *
 
@@ -108,18 +126,33 @@ var itDepartment = [
 
 // * Your code Start *
 
+var fullNames = itDepartment.map(function(item){
+  return item.firstt + ' ' + item.last
+});
 
+var filtered = itDepartment.filter(function(item){
+  return item.possition.match(/\-end$/);
+});
+
+var sorted = itDepartment.sort(function(itemA, itemB){
+  var currentYear = new Date().getFullYear();
+  return currentYear - itemA.born > currentYear - itemB.born
+});
+
+var counter = itDepartment.reduce(function(count, item){
+
+}, {});
 
 // * Your code End *
 
-// map(); Создайте массив в котором будут имена и фамилии всех работников It департамента. (Пример: Philip Bradley ...)
+// map(); Создайте массив в котором будут имена и фамилии всех работников It департамента. (В формате Philip Bradley)
 console.dir(fullNames);
 
-// filter(); Отфильтруйте всех разработчиков (Front-end/Back-end) И выведете их имена и должности
-console.table(filtered);
+// filter(); Отфильтруйте всех разработчиков (Developer) И выведете их имена и должности
+console.dir(filtered);
 
-// sort(); Отсортируйте массив по возрасту работников. По убыванию. (Подсказака: используйте конструктор new Data() для определения возраста)
-console.table(sorted);
+// sort(); Отсортируйте массив по возрасту работников. По убыванию. ()Подсказака: используйте конструктор new Data())
+console.dir(sorted);
 
 // reduce(); Узнайте сколько всего разработчико разных должностей. Например:
 // Front-end: 2,

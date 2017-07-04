@@ -116,10 +116,10 @@ var itDepartment = [
 console.dir(fullNames);
 
 // filter(); Отфильтруйте всех разработчиков (Developer) И выведете их имена и должности
-console.table(filtered);
+console.dir(filtered);
 
 // sort(); Отсортируйте массив по возрасту работников. По убыванию. ()Подсказака: используйте конструктор new Data())
-console.table(sorted);
+console.dir(sorted);
 
 // reduce(); Узнайте сколько всего разработчико разных должностей. Например:
 // Front-end: 2,
