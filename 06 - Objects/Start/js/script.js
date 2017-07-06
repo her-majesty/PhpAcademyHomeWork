@@ -1,6 +1,59 @@
 console.clear();
 
-// ## 0 Конструкторы и обьекты
+// ## 0 Обьекты как нумерованные массивы
+//
+// При создании обьекта через литерал ({}) через __proto__ доступны методы, такие как .valueOf, .hasOwnPropperty
+// Цель: создать новый обьект из массива, в котором не было б лишних методов
+
+const states = ["Alabama", "Alaska", "Arizon ", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New", "New", "New", "New", "North", "North", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode", "South", "South", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West", "Wisconsin", "Wyoming"];
+
+// * Your code Start *
+
+
+
+// * Your code End *
+
+try {
+  console.log(statesObject.toLocaleString())  //[object Object] . Так как у обьекта есть этот метод
+} catch (err) {
+  console.info(`Ошибка: ${err.message}`)
+}  // Если выводится сообшение об ошибке, значит такого свойства нет
+
+console.log('='.repeat(50));
+
+// ## 1 Дескрипторы, модификация обьекта
+//
+// Модифицируйте свойства обьекта
+// ** Свойство name должно быть константой, которую нельзя удалить или модифицировать
+// ** Свойство age можно удалит и модифицировать
+// ** Свойство password нельзя удалить, можно модифицировать и его не должно быть видно в цикле for..in
+
+const user = {
+  name: 'Alex',
+  age: 30,
+  password: 'Pt3]cfoes'
+};
+
+// * Your code Start *
+
+
+
+// * Your code End *
+
+delete user.name;
+user.name = 'Sasha';
+user.age = 25;
+user.password = 'JqcU7#fr';
+
+for (var key in user) {
+  console.log(user[key]) // Должно вывести "Alex, 30". Пароль в перебор попасть не должен. Будет выведен дальше
+}
+
+console.log(user.password) // Вывод: 'JqcU7#fr'
+
+console.log('='.repeat(50));
+
+// ## 2 Конструкторы и обьекты
 //
 // Цель: Создать 3 персононажа из "Братства кольца"
 // Каждый персонаж будет иметь 5 свойств (Имя, Оружие - принимаемые аргумент, Интелект, Сила, Ловкость - задаются по умолчанию как 10)
@@ -16,6 +69,7 @@ console.clear();
 // Так же при приведении обьекта к типу - строка, обьект выводит название оружия персонажа
 
 // * Your code Start *
+
 
 
 // * Your code End *
