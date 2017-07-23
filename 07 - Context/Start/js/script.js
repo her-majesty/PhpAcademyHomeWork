@@ -3,6 +3,7 @@ console.clear();
 // ## 0 Понимание контекста
 //
 // Задача обьяснить почму выводится такой результат
+// Сделайте так что б функция работала корректно
 
 var fullname = 'Alex Murphy';
 var person = {
@@ -15,14 +16,22 @@ var person = {
    }
 };
 
-console.log(person.prop.getFullname()); // William Mason
+console.log(person.prop.getFullName()); // William Mason
 
-var personProp = person.prop.getFullname;
+var personProp = person.prop.getFullName.bind(person.prop);
 
-console.log(personProp()); // Alex Murphy
+console.log(personProp()); // Alex Murphy - неверно
 
 // * Your Answer Start *
 
 
 
 // * Your Answer End *
+
+// * Your Code Start *
+
+
+
+// * Your Code End *
+
+console.log(personProp()); // Должно вывести 'William Mason'
