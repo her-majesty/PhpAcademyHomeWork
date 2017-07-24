@@ -5,7 +5,7 @@ console.clear();
 // Задача обьяснить почму выводится такой результат
 // Сделайте так что б функция работала корректно
 
-var fullname = 'Alex Murphy';
+var fullName = 'Alex Murphy';
 var person = {
    fullName: 'John Doe',
    prop: {
