@@ -18,7 +18,7 @@ var person = {
 
 console.log(person.prop.getFullName()); // William Mason
 
-var personProp = person.prop.getFullName.bind(person.prop);
+var personProp = person.prop.getFullName;
 
 console.log(personProp()); // Alex Murphy - неверно
 
@@ -71,3 +71,19 @@ console.log(sortedArgument('Lorem', 'ipsum', 'dolor', 'Sit', 'amet', 'consectetu
 
 // ## 3 Карринг
 //
+// Создайте цепочку вызовов для прохождения лабиринта
+
+var hero = {
+  positionX: 0,
+  positionY: 0,
+  // * Your Code Start *
+
+
+
+  // * Your Code End *
+}
+
+
+console.log(hero.moveBottom(3).moveRight(3).moveLeft(1).moveTop(5));
+
+console.log(hero.positionX, hero.positionY) // 2, -2
