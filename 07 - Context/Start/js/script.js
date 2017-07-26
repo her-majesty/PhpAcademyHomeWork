@@ -69,21 +69,40 @@ console.log(minInNumbers) // -3424256
 console.log(sortedArgument(12, 4, 6, 8, 56, 7, 4, 7)) // [4, 4, 6, 7, 7, 8, 12, 56]
 console.log(sortedArgument('Lorem', 'ipsum', 'dolor', 'Sit', 'amet', 'consectetur', 'adipisicing', 'elit')) // ["adipisicing", "amet", "consectetur", "dolor", "elit", "ipsum", "lorem", "sit"]
 
-// ## 3 Карринг
+// ## 3 Карринг при помощи bind
 //
-// Создайте цепочку вызовов для прохождения лабиринта
+// Используя bind создайте 2 функции которые выводили имя с приставкой Mr./Ms.
 
-var hero = {
-  positionX: 0,
-  positionY: 0,
-  // * Your Code Start *
+var greeting = function (gender, name) {
+		var appeal;
+		if(gender === "male") {
+			appeal = 'Mr.'
+		} else if(gender === "female") {
+			appeal = 'Ms.'
+		}
 
-
-
-  // * Your Code End *
+		return `${appeal} ${name}`
 }
 
+// * Your Code Start *
 
-console.log(hero.moveBottom(3).moveRight(3).moveLeft(1).moveTop(5));
 
-console.log(hero.positionX, hero.positionY) // 2, -2
+
+// * Your Code End *
+
+console.log(greetMs("Allison Rosalind")); // "Ms. Allison Rosalind"
+console.log(greetMr("John Hartlove")); // "Mr. John Hartlove"
+
+
+
+// ## 4 Карринг при помощи функций
+//
+// Реализуйте работу функции sumCurring
+
+// * Your Code Start *
+
+
+
+// * Your Code End *
+
+sumCurring(10)(20)(30); // => 60
