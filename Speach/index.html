@@ -47,7 +47,9 @@
     }
 
     body {
-      background:#ffc600;
+      background: #be93c5; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #be93c5, #7bc6cc); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #be93c5, #7bc6cc);
       font-family: 'helvetica neue';
       font-weight: 200;
       font-size: 20px;
@@ -55,10 +57,11 @@
 
     .words {
       max-width:500px;
+      min-height: 500px;
       margin:50px auto;
       background:white;
       border-radius:5px;
-      padding:1rem 2rem 1rem 5rem;
+      padding: 2rem;
       background-size: 100% 3rem;
       position: relative;
       line-height:3rem;
