@@ -2,12 +2,24 @@
 <html>
 <head>
 	<title></title>
-	<script type="text/javascript" src="./js/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.5.0/mocha.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.5.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd');
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.1.2/chai.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
 </head>
 <body>
   <h1 class="some-dom-element">Consectetur adipisicing</h1>
   <p class="some-xml-element">
     <strong>Lorem</strong> ipsum dolor <a href="#">sit amet</a>, consectetur adipisicing elit. Fuga excepturi nobis cumque porro ad dolorem, eos sed magnam esse repellendus pariatur modi iste, illo iure itaque <em>unde praesentium</em> perspiciatis dolor.
   </p>
+  
+  <script type="text/javascript" src="./js/test.js"></script>
+  <div id="mocha"></div>
+  <script>
+    mocha.run();
+  </script>
 </body>
 </html>
