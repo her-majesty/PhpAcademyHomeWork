@@ -15,7 +15,7 @@ console.log('Hello World!');
 
 var myNumber = 1;
 var myString = 'hello';
-var myBoollean = true;
+var myBollean = true;
 var myUndefined = undefined;
 var myNull = null;
 
@@ -38,9 +38,9 @@ var sideC = 9;
 var perimetr = sideA + sideB + sideC;
 var halfPerimetr = perimetr / 2;
 var internalRoundRadius = Math.sqrt((halfPerimetr-sideA)*(halfPerimetr-sideB)*(halfPerimetr-sideC)/halfPerimetr);
-var intRoundRadiusForRightangled = (sideA+sideB-sideC)/2;
+var internalRoundRadiusRightangled = (sideA+sideB-sideC)/2;
 
-console.log('Perimetr = ' + perimetr, 'halfPerimetr = ' + halfPerimetr, 'internalRoundRadius= ' + internalRoundRadius, 'internalRoundRadiusForRightangled = ' + intRoundRadiusForRightangled);
+console.log('Perimetr = ' + perimetr, 'halfPerimetr = ' + halfPerimetr, 'internalRoundRadius= ' + internalRoundRadius, 'internalRoundRadiusRightangled = ' + internalRoundRadiusRightangled);
 
 
 // ## 3 Названия переменных
@@ -80,7 +80,7 @@ console.log(user.name);
 //
 // Обьясните почему консоль выводит такой результат. Ответ запишите в комментарии напротив строки
 
-console.info('6' - 3); // При математических операциях, кроме сложения, пытается преобразовать строку в число
+console.info('6' - 3); // При математических операциях, кроме сложения, пытается преобразовать в число
 console.info('20' + 10); // воспринимает как конкатенацию строк
 console.info('10' + - 2); // воспринимает как конкатенацию строк, вторая строка "-2";
 console.info("4px" - 2); // пытается преобразить в число, но если не получилось - NaN;

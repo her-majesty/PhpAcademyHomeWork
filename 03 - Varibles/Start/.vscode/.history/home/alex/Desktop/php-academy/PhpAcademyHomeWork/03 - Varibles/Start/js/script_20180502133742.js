@@ -38,9 +38,9 @@ var sideC = 9;
 var perimetr = sideA + sideB + sideC;
 var halfPerimetr = perimetr / 2;
 var internalRoundRadius = Math.sqrt((halfPerimetr-sideA)*(halfPerimetr-sideB)*(halfPerimetr-sideC)/halfPerimetr);
-var intRoundRadiusForRightangled = (sideA+sideB-sideC)/2;
+var internalRoundRadiusForRightangled = (sideA+sideB-sideC)/2;
 
-console.log('Perimetr = ' + perimetr, 'halfPerimetr = ' + halfPerimetr, 'internalRoundRadius= ' + internalRoundRadius, 'internalRoundRadiusForRightangled = ' + intRoundRadiusForRightangled);
+console.log('Perimetr = ' + perimetr, 'halfPerimetr = ' + halfPerimetr, 'internalRoundRadius= ' + internalRoundRadius, 'internalRoundRadiusForRightangled = ' + internalRoundRadiusForightangled);
 
 
 // ## 3 Названия переменных
